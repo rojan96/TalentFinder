@@ -26,7 +26,7 @@
         }
 
         .bg-image {
-            background-image: url('img/crowd2.jpg');
+            background-image: url('img/brush.jpg');
             background-size: 100%;
             background-position: right;
             background-repeat: no-repeat;
@@ -103,67 +103,46 @@
             font-size: 12px;
             color: #777;
         }
+
+        .container{
+            padding-top: 1%;
+            padding-bottom: 1%;
+        }
     </style>
 
 </head>
 
-<body data-spy="scroll" data-target="#navbar" data-offset="0">
-
-
-        <nav id="navbar" class="navbar navbar-success bg-light sticky-top" >
-            <a class="navbar-brand" href="index.php">Talent Finder</a>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#login">Log in</a>
+<body>
+<div class="container-fluid">
+    <!--Navigation Bar Code-->
+    <nav class="navbar navbar-expand-sm bg-dark">
+        <a class="navbar-brand" style="opacity: 1;" href="#"><img src="img/golo.png" height="100px" width = "100px"></a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+                aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.php"><h3>Home</h3> <span class="sr-only">(current)</span></a>
                 </li>
-
                 <li class="nav-item">
-                    <a class="nav-link" href="#signup">Sign up</a>
+                    <a class="nav-link" href="#Contact"><h3>Contact Us</h3></a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="Login.php"><h3>Login</h3></a>
+                </li>
             </ul>
-        </nav>
-    <div >
-        <h2 id="login" style="text-align: center">Log in</h2>
-        <div class="container">
-            <div class="row no-gutter">
-                <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
-                <div class="col-md-8 col-lg-6">
-                    <div class="login d-flex align-items-center py-5">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-9 col-lg-8 mx-auto">
-                                    <h3 class="login-heading mb-4">Welcome back!</h3>
-                                    <form action="login.php" method="POST">
-                                        <div class="form-label-group">
-                                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                                            <label for="inputEmail">Email address</label>
-                                        </div>
-
-                                        <div class="form-label-group">
-                                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                                            <label for="inputPassword">Password</label>
-                                        </div>
-
-                                        <div class="custom-control custom-checkbox mb-3">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                            <label class="custom-control-label" for="customCheck1">Remember password</label>
-                                        </div>
-                                        <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
-                                        <div class="text-center">
-                                            <a class="small" href="#">Forgot password?</a></div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+    </nav>
+        <div style="background-color: #2F3C7E; color:#FBEAEB ">
+                       <div class="container">
+                <div class="jumbotron" style="background-color: #98b2e6">
+                    <h2 class="display-4" style="text-align: center;color:#2F3C7E">Sign up</h2>
                 </div>
             </div>
-        </div>
-
-        <div style="background-color: #FBEAEB; color: #2F3C7E">
-            <h2 id="signup" style="text-align: center;">Sign Up</h2>
-            <div class="container" style="background-color: #FBEAEB">
+            <div class="container" >
                 <div class="row no-gutter">
                     <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
                     <div class="col-md-8 col-lg-6">
@@ -172,31 +151,52 @@
                                 <div class="row">
                                     <div class="col-md-9 col-lg-8 mx-auto">
                                         <h5 class="card-title text-center">Register</h5>
-                                        <form class="form-signin">
+                                        <form class="form-signin" action="addnewuser.php">
                                             <div class="form-label-group">
-                                                <input type="text" id="inputUserame" class="form-control" placeholder="Username" required autofocus>
-                                                <label for="inputUserame">Username</label>
+                                                <input type="text" id="username" class="form-control" name="username" placeholder="ssername" required autofocus>
+                                                <label for="username">Username</label>
                                             </div>
 
                                             <div class="form-label-group">
-                                                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
-                                                <label for="inputEmail">Email address</label>
+                                                <input type="text" id="firstname" class="form-control" name="firstname" placeholder="firstname" required autofocus>
+                                                <label for="firstname">First Name</label>
+                                            </div>
+                                            <div class="form-label-group">
+                                                <input type="text" id="lastname" class="form-control" name="lastname" placeholder="lastname" required autofocus>
+                                                <label for="lastname">Last Name</label>
                                             </div>
 
+                                            <div class="form-label-group">
+                                                <input type="email" id="email" class="form-control" name="email" placeholder="Email address" required autofocus>
+                                                <label for="email">Email address</label>
+                                            </div>
+
+
+
+
+                                            <hr>
+                                            <div class="form-label-group">
+                                                <input type="date" id="dateofbirth" class="form-control" name="dateofbirth" placeholder="Date of Birth" required autofocus>
+                                                <label for="dateofbirth">Date of birth</label>
+                                            </div>
+
+                                            <div class="form-label-group">
+                                                <textarea class="form-control"  cols="60" id="bio" name="bio" placeholder="Tell us a little bit about yourself." required autofocus></textarea>
+                                            </div>
                                             <hr>
 
                                             <div class="form-label-group">
-                                                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                                                <label for="inputPassword">Password</label>
+                                                <input type="password" id="password" class="form-control" name="password" placeholder="Password" required>
+                                                <label for="password">Password</label>
                                             </div>
 
                                             <div class="form-label-group">
-                                                <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
-                                                <label for="inputConfirmPassword">Confirm password</label>
+                                                <input type="password" id="confirmpassword" class="form-control" name="confirmpassword" placeholder="Password" required>
+                                                <label for="confirmpassword">Confirm password</label>
                                             </div>
-                                            <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
-                                            <div class="text-center">
-                                                <a class="small" href="#">Forgot password?</a></div>
+                                            <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Register</button>
+                                            <div class="text-center h3">
+                                                <a class="small" href="Login.php">Already have an account?</a></div>
                                         </form>
                                     </div>
                                 </div>
@@ -210,17 +210,14 @@
 <!--Contact Us Section-->
 
 <div id="Contact"></div>
-<div class="jumbotron" style="background-color: #161b21 ">
-    <h4 class="display-4" style="color:#F4A950; text-align: center">Contact Us</h4>
-    <p style="color:gray; text-align: center; color:white"> <a href="https://www.fb.com">Facebook</a></p>
-    <p style="color:gray; text-align: center;color:#F4A950"> <a href="https://www.instagram.com"> Instagram </a></p>
-    <h5 style="text-align: center; color:white;">2019 ©  Fly Away, Inc. All rights reserved.</h5>
+<div class="jumbotron" style="background-color: #FBEAEB ">
+
+    <h5 style="text-align: center; color:black;">2019 ©  TalentFinder, Inc. All rights reserved.</h5>
 
 
 </div>
 </body>
 </html>
-
 
 
 
